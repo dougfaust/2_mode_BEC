@@ -1,7 +1,7 @@
 # Bose-Einstein Condensate splitting experiments    
 
 <img src="./images/Num_Density.gif"><img src="./images/Phase.gif">
-
+(images from this code extended to 2D via OpenMP and run at the Texas Advanced Computing Center)
 
 See for example:    
 [https://doi.org/10.1103/PhysRevLett.99.240406](https://doi.org/10.1103/PhysRevLett.99.240406)    
