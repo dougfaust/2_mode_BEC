@@ -25,11 +25,11 @@ GitHub repo:
 * ``rkqs_.c`` / ``rkck_.c``
     Runge-Kutta-Cash-Karp adapted for complex functions   
     "M" and "W" suffixes replacing the underscores defined as above   
- * ``realft.c`` / ``four1.c`` / ``sinft.c``
+* ``realft.c`` / ``four1.c`` / ``sinft.c``
     FFT routines (replaced by FFTW and MPI in 2D and 3D code)
   
- ## Data Files
- * ``InputCI.dat`` / ``InputWF.dat``
-  Provides initial values of the Fock space (CI) coefficients and wave function (WF)    
-  Typically found by a complex-time relaxation solver to find the ground state
+## Data Files
+* ``InputCI.dat`` / ``InputWF.dat``
+    Provides initial values of the Fock space (CI) coefficients and wave function (WF)    
+    Typically found by a complex-time relaxation solver to find the ground state
  
