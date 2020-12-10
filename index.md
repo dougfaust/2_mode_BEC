@@ -10,7 +10,7 @@ Used as basis of publications on quantum information of multi-mode AMO systems:
 GitHub repo:   
 [https://github.com/dougfaust/2_mode_BEC](https://github.com/dougfaust/2_mode_BEC)    
 
-## Code Files
+## Index of Code Files
 * ``Makefile``
 * ``main.c``
 * ``nrutil.h``
