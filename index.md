@@ -1,13 +1,15 @@
-# Code to simulate Bose-Einstein Condensate splitting experiments    
+# Bose-Einstein Condensate splitting experiments    
 
 
 See for example:    
-[https://doi.org/10.1103/PhysRevLett.99.240406](https://doi.org/10.1103/PhysRevLett.99.240406)
+[https://doi.org/10.1103/PhysRevLett.99.240406](https://doi.org/10.1103/PhysRevLett.99.240406)    
 
 Used as basis of publications on quantum information of multi-mode AMO systems:    
-[https://doi.org/10.1103/PhysRevLett.105.240404](https://doi.org/10.1103/PhysRevLett.105.240404)
+[https://doi.org/10.1103/PhysRevLett.105.240404](https://doi.org/10.1103/PhysRevLett.105.240404)    
 
-GitHub repo: [https://github.com/dougfaust/2_mode_BEC](https://github.com/dougfaust/2_mode_BEC)
+GitHub repo:   
+[https://github.com/dougfaust/2_mode_BEC](https://github.com/dougfaust/2_mode_BEC)    
+
 ## Code Files
 * ``Makefile``
 * ``main.c``
@@ -27,6 +29,6 @@ GitHub repo: [https://github.com/dougfaust/2_mode_BEC](https://github.com/dougfa
   
  ## Data Files
  * ``InputCI.dat`` / ``InputWF.dat``
-  Initial values of the Fock space (CI) and the wave function (WF)   
+  Provides initial values of the Fock space (CI) coefficients and wave function (WF)    
   Typically found by a complex-time relaxation solver to find the ground state
  
