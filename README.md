@@ -25,7 +25,7 @@ Used as basis of publications on quantum information multi-mode systems:
     FFT routines (replaced by FFTW and MPI in 2D and 3D code)
   
  ## Data Files
- * InputCI.dat / InputWF.dat
-  + Initial values of the Fock space (CI) and the wave function (WF)
-  + Typically found by a complex-time relaxation solver to find the ground state
+ * ``InputCI.dat`` / ``InputWF.dat``
+  Initial values of the Fock space (CI) and the wave function (WF)   
+  Typically found by a complex-time relaxation solver to find the ground state
  
