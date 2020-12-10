@@ -1,37 +1,31 @@
-## Welcome to GitHub Pages
+# 2_mode_BEC
+Code to simulate Bose-Einstein Condensate splitting experiments    
 
-You can use the [editor on GitHub](https://github.com/dougfaust/2_mode_BEC/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+See for example:    
+[https://doi.org/10.1103/PhysRevLett.99.240406](https://doi.org/10.1103/PhysRevLett.99.240406)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Used as basis of publications on quantum information of multi-mode AMO systems:    
+[https://doi.org/10.1103/PhysRevLett.105.240404](https://doi.org/10.1103/PhysRevLett.105.240404)
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/dougfaust/2_mode_BEC/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## Code Files
+* ``Makefile``
+* ``main.c``
+* ``nrutil.h``
+    utilities from Numerical Recipes and group legacy code
+* ``nutil.c``
+    nutil implementation file
+* ``odeintM.c`` / ``odeintW.c``
+    master routine to propagate a single timestep  
+    suffix "M" optimized for Fock space coefficients  
+    suffix "W" optimized for wavefunction  
+* ``rkqs_.c`` / ``rkck_.c``
+    Runge-Kutta-Cash-Karp adapted for complex functions   
+    "M" and "W" suffixes replacing the underscores defined as above   
+ * ``realft.c`` / ``four1.c`` / ``sinft.c``
+    FFT routines (replaced by FFTW and MPI in 2D and 3D code)
+  
+ ## Data Files
+ * ``InputCI.dat`` / ``InputWF.dat``
+  Initial values of the Fock space (CI) and the wave function (WF)   
+  Typically found by a complex-time relaxation solver to find the ground state
+ 
