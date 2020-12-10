@@ -1,6 +1,8 @@
 # Bose-Einstein Condensate splitting experiments    
 
 ![](https://github.com/dougfaust/2_mode_BEC/blob/gh-pages/images/Num_Density.gif) ![](https://github.com/dougfaust/2_mode_BEC/blob/gh-pages/images/Phase.gif)
+<img src="./images/Num_Density.gif"><img src="./images/Phase.gif">
+
 
 See for example:    
 [https://doi.org/10.1103/PhysRevLett.99.240406](https://doi.org/10.1103/PhysRevLett.99.240406)    
@@ -30,6 +32,6 @@ GitHub repo:
   
 ## Data Files
 * ``InputCI.dat`` / ``InputWF.dat``
-    Provides initial values of the Fock space (CI) coefficients and wave function (WF)    
-    Typically found by a complex-time relaxation solver to find the ground state
+    Provides initial values of the Fock space (CI) coefficients and wave function (WF) - 
+    typically found by a complex-time relaxation solver to find the ground state
  
