@@ -1,5 +1,5 @@
-# 2_mode_BEC
-Code to simulate Bose-Einstein Condensate splitting experiments    
+# Code to simulate Bose-Einstein Condensate splitting experiments    
+
 
 See for example:    
 [https://doi.org/10.1103/PhysRevLett.99.240406](https://doi.org/10.1103/PhysRevLett.99.240406)
@@ -7,6 +7,7 @@ See for example:
 Used as basis of publications on quantum information of multi-mode AMO systems:    
 [https://doi.org/10.1103/PhysRevLett.105.240404](https://doi.org/10.1103/PhysRevLett.105.240404)
 
+GitHub repo: [https://github.com/dougfaust/2_mode_BEC](https://github.com/dougfaust/2_mode_BEC)
 ## Code Files
 * ``Makefile``
 * ``main.c``
