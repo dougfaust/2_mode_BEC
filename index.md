@@ -1,6 +1,5 @@
 # Bose-Einstein Condensate splitting experiments    
 
-![](https://github.com/dougfaust/2_mode_BEC/blob/gh-pages/images/Num_Density.gif) ![](https://github.com/dougfaust/2_mode_BEC/blob/gh-pages/images/Phase.gif)
 <img src="./images/Num_Density.gif"><img src="./images/Phase.gif">
 
 
