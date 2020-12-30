@@ -4,7 +4,7 @@
 #include <stdio.h>
 #define NRANSI
 #include "nrutil.h"
-#define MAXSTP 5000
+#define MAXSTP 5000 // determined via Richardson interpolation, but should never be triggered
 #define TINY 1.0e-30
 #define NR_END 1
 #define FREE_ARG char*
