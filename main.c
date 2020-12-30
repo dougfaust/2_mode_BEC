@@ -1,6 +1,15 @@
 
-/* rewrite of full WF and CI 2 mode dynamics with RK4 drivers for either variable, 
-   sensible units (AMU, msec, microns), sensible variable names, sensible organization */
+/* 
+   computational model of Bose-Einstein splitting experiments (c.f. https://doi.org/10.1103/PhysRevLett.99.240406)
+   
+   theory behind code detailed in https://arxiv.org/abs/1008.0217
+   
+   this version includes:
+   rewrite of full WF and CI 2 mode dynamics with RK4 drivers for either variable, 
+   sensible units (AMU, msec, microns), sensible variable names, sensible organization 
+   
+   exists as DKF's skeleton code for CS to port to full 2D and 3D
+*/
 
 #include "math.h"
 #include <stdio.h>
@@ -227,7 +236,7 @@ int main()
                for(i=0;i<=2*np+1;i++) c[i] /= norm;
 
 
-	    /* put in secular phase evolution
+	    /* put in secular phase evolution for large number of particles this is NOT recommended
 	    for(i=0;i<=2*np+1;i+=2)
 	      {
 		temp1 = Csec*c[i]-Ssec*c[i+1];
@@ -242,7 +251,7 @@ int main()
 	    fprintf(stdout, "time = %f millisec, printing to file \n", time);
 
 //
-// skip the first 10 ms 5/27/2010
+// skip the first 10 ms (added 5/27/2010 to show PRL referees that we do indeed have the true ground state)
 //   
 if(time >= 10.00){
 	    // print output to appropriate files
@@ -331,7 +340,7 @@ void derivs2(double c[], double dcdt[], int n)  // this is the Fock-space Hamilt
 {
 
   extern double **H;
-  double temp, hbar = 63.5077;
+  double temp, hbar = 63.5077; // AMU, millisec, microns
   int i, j;
 
   for(i=0;i<=n;i++){
@@ -398,7 +407,7 @@ void derivs(double t,double y[],double dydx[], double ke_x[], double scale_facto
 	  aTr[i]  += (b + mu)*a_r[i];  
 	  aTi[i] += (b + mu)*a_i[i];
 
-	  //	  dydx[2*i-1] = a_r[i];  // i don't know what this does.  
+	  //	  dydx[2*i-1] = a_r[i];  // deprecated way of storing derivs inherited from WPR's post-doc. i don't see why it's useful? 
 	  //dydx[2*i] = a_i[i];		
 
 	  xx += dx;
@@ -466,7 +475,8 @@ void fillHam(double a[], double t, int np, int nvar)  // fill the CI basis Hamil
    void fillEngys(double [], double [], double, int);
 
 
-         // compute Gammas
+         // compute Gammas.  
+	 // this code doesn't really look "D.R.Y.", but there are lots of non-trivial permutations between each GXXX.
 
   G1111 = 0.000;
  for(i=1;i<=2*nvar;i+=2)
@@ -546,7 +556,7 @@ iG1122 = temp2;
 
 
 
- /* THIS VERSION IS THE NEW (AND POSSIBLY CORRECT) VERSION */
+ /* THIS VERSION IS THE NEW (AND POSSIBLY CORRECT) VERSION OF THE FOCK-SPACE HAMILTONIAN */
 
    /* REAL PART */
    for(i=0;i<=2*np;i+=2){
